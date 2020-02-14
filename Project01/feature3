@@ -1,0 +1,4 @@
+#!/bin/bash
+echo "du -s/CS1XA3  -h -d 1 | sort -n"
+
+

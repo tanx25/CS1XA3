@@ -1,0 +1,7 @@
+#!/bin/bash
+if  [test -f "$fixme.log"]; then
+  find . -name "*#FIXME" | xargs cp -r  private/CS1XA3/Project01/fixme.log
+else
+  touch fixme.log
+  find . -name "*#FIXME" | xargs cp -r  private/CS1XA3/Project01/fixme.log
+fi
