@@ -1,0 +1,5 @@
+#!/bin/bash
+read git rev-parse HEAD
+echo $
+git checkout $/merge
+fi
