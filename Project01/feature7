@@ -1,0 +1,8 @@
+#!/bin/bash
+find . -type s  -name "*.sh"
+touch permissions.log
+echo -n "choose from Change and Restore:"read Input
+if [ $Input -eq Change ]; then
+find . ls -F|grep “*” | xargs cp /permissions.log
+elif [ $Input -eq Restore ]; then
+setfacl -b grep "*"
