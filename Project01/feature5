@@ -1,11 +1,6 @@
 #!/bin/bash
-if [read -s -p '.png'];then
-echo"$ls *.png|grep -v total| wc -l"
-if [read -s -p '.txt'];then
-echo"$ls *.txt|grep -v total| wc -1"
-if [read -s -p '.pdf'];then
-echo"$ls *.pdf|grep -v total| wc -1"
-if [read -s -p] '.py'];then
-echo"$ls *.py|grep -v total| wc -1"
-if [read -s -p '.etc']; then
-echo "$ls *.etc|grep -v total| wc -1"
+echo "use Tag.log"
+read $
+touch $
+find . -type f -name "*.py"/^# | xargs cp /Tag.log
+fi
