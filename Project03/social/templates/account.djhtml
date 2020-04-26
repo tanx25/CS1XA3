@@ -1,0 +1,42 @@
+{% extends 'social_base.djhtml' %}
+
+{% block title %}Account Page{% endblock %}
+
+{% block middle_column %}
+    <div class="w3-row-padding">
+        <div class="w3-col m12">
+            <div class="w3-card w3-round w3-white">
+                <div class="w3-container w3-padding">
+                    <h6 class="w3-opacity">Change Password</h6>
+                    <!--                     TODO Objective 3: Add Password Change Form -->
+                    <form method="post" action="{% url 'social:account_view' %}">
+                    {% csrf_token %}
+                    {{ change_form }}
+                    <input type="submit" value="Submit" />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="w3-row-padding">
+        <div class="w3-col m12">
+            <div class="w3-card w3-round w3-white">
+                <div class="w3-container w3-padding">
+                    <form class="modal-content " method="post" action="{% url 'social:account_view' %}">
+                    {% csrf_token %}
+                        <!--                     TODO Objective 3: Add User Info Update Forms -->
+                        <h6 class="w3-opacity">change_employment</h6>
+                        <input type="text" name="change_employment">
+                        <h6 class="w3-opacity">change_location</h6>
+                         <input type="text" name="change_location">
+                        <h6 class="w3-opacity">change_birthday</h6>
+                         <input type="date" name="change_birthday">
+                        <h6 class="w3-opacity">change_interest</h6>
+                        <input type="text" name="change_interest"><br>
+                        <input type="submit" value="Submit"/>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

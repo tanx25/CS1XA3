@@ -1,0 +1,14 @@
+{% extends 'base.djhtml' %}
+
+{% block title %}Signup Page{% endblock %}
+
+{% block middle_column %}
+  <form class="modal-content animate" id="create_form" method="post" action="{% url 'login:signup_view' %}">
+      {% csrf_token %}
+      {{ create_form }}
+      <input type="submit" value="Submit" />
+  </form>
+  {% if signup_failed %}
+      <p style="color:red"> Invalid username or password </p>
+  {% endif %}
+{% endblock %}
