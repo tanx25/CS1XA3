@@ -22,6 +22,7 @@
             <img src="{% static 'avatar.png'  %}" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
             <span class="w3-right w3-opacity">{{post.timestamp}}</span>
             <h4 class="post-user">{{post.owner.user}}</h4><br>
+            <p>{{ post.content }}</p>
             <hr class="w3-clear">
 
             <!-- TODO Objective 10: Add Post id and likes count -->
